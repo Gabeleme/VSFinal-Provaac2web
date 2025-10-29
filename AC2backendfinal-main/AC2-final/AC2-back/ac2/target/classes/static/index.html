@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Projetos</title>
+    <link rel="stylesheet" href="css/projetos.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Atividade 3 – AC2: Sistema de Controle de Projetos</h1>
+
+        <!-- Seção de Cadastro -->
+        <section class="form-section">
+            <h2>Adicionar Novo Projeto</h2>
+            <form id="formProjeto" method="post" action="/projetos">
+                <div class="campo">
+                    <label for="nome">Nome do Projeto:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite o nome do projeto" required>
+                </div>
+
+                <div class="campo">
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" id="descricao" name="descricao" placeholder="Digite a descrição" required>
+                </div>
+
+                <div class="campo">
+                    <label for="dataInicio">Data de Início:</label>
+                    <input type="date" id="dataInicio" name="dataInicio" required>
+                </div>
+
+                <div class="campo">
+                    <label for="dataFim">Data de Fim:</label>
+                    <input type="date" id="dataFim" name="dataFim" required>
+                </div>
+
+                <button type="submit">Adicionar Projeto</button>
+            </form>
+        </section>
+
+        <!-- Seção de Listagem -->
+        <section class="lista-section">
+            <h2>Lista de Projetos Cadastrados</h2>
+            <table id="tabelaProjetos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Data de Início</th>
+                        <th>Data de Fim</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyProjetos">
+                    <!-- Aqui o backend preencherá os dados dos projetos -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="js/projetos.js"></script>
+</body>
+
+</html>

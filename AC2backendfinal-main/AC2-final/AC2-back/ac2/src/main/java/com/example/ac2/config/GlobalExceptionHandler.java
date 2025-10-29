@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import com.example.ac2.dtos.ApiErrorDTO;
 import com.example.ac2.dtos.RegraNegocioException;
 
-/**
- * Classe responsável por tratar exceções lançadas pelos controladores REST.
- */
+
+// Classe responsável por tratar exceções lançadas pelos controladores REST.
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 

@@ -86,4 +86,17 @@ public class ProjetoServiceImpl implements ProjetoService {
         projetoRepository.save(projeto);
         funcionarioRepository.save(funcionario);
     }
+
+    // usado pelo front-end para listar os projetos
+    @Override
+    public List<DadosProjetoDTO> listarTodos() {
+        return projetoRepository.findAll().stream()
+                .map(projeto -> DadosProjetoDTO.builder()
+                        .id(projeto.getId())
+                        .descricao(projeto.getDescricao())
+                        .dataInicio(projeto.getDataInicio())
+                        .dataFim(projeto.getDataFim())
+                        .build())
+                .collect(Collectors.toList());
+    }
 }

@@ -7,9 +7,9 @@ import com.example.ac2.dtos.DadosSetorDTO;
 import com.example.ac2.services.SetorService;
 
 
-  //Controlador responsável por gerenciar operações relacionadas a setores.
+  // Controlador responsável por gerenciar operações relacionadas a setores.
 
-@RestController //RestController indica que esta classe é um controlador REST
+@RestController // RestController indica que esta classe é um controlador REST
 @RequestMapping("/setor")
 public class SetorController {
 
@@ -25,7 +25,7 @@ public class SetorController {
         service.adicionar(dto);
     }
 
-    @GetMapping("/{id}") //Mapeia as requisições HTTP GET para este método, com o ID do setor na URL
+    @GetMapping("/{id}") // Mapeia as requisições HTTP GET para este método, com o ID do setor na URL
     public DadosSetorDTO obterSetorPorId(@PathVariable Integer id) {
         return service.buscarSetorPorId(id);
     }
